@@ -71,8 +71,12 @@ h3 {
 	background: #e2e2e2;
 }
 
+.random-jokes__joke p {
+	display: block;
+	margin-bottom: 6px;
+}
+
 .random-jokes__add-to-favourite {
-	margin-top: 6px;
 	color: #3f5b87;
 	text-decoration: underline;
 	cursor: pointer;

@@ -44,9 +44,9 @@ export default class JokeHandler {
 		const jokeListEl = jokes.value.map((joke) => (`
 			<div class="random-jokes__joke">
 				<p data-id=${joke.id}>${joke.joke}</p>
-				<div class="random-jokes__add-to-favourite">
-					<span>Add to favourites<span>
-				</div>
+				<span class="random-jokes__add-to-favourite" data-joke-id=${joke.id}>
+					Add to favourites
+				</span>
 			</div>
 		`)).join('');
 		this.jokesList.innerHTML = this.jokesList.innerHTML + jokeListEl;
