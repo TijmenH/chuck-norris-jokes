@@ -23,6 +23,14 @@ export default class FavouriteHandler {
 					this.addToFavourites(jokeId);
 				}
 			});
+		// Add event linstener to the favored joke list
+		this.favouritesListEl
+			.addEventListener('click', (e) => {
+				if (e.target.classList.contains('favourite-jokes__remove-from-favourite')) {
+					const jokeId = e.target.dataset.jokeId;
+					this.removeFromFavourites(jokeId);
+				}
+			});
 	}
 
 	/**
@@ -62,7 +70,7 @@ export default class FavouriteHandler {
 			}
 		}
 		// Find the joke
-		const joke = document.querySelector(`.random-jokes__joke [data-id="${jokeId}"]`);
+		const joke = document.querySelector(`.random_jokes__text[data-id='${jokeId}']`);
 		if (!joke) return; // The joke couldn't be found in the list, do nothing
 		// Save it to localstorage
 		const newFavoredJoke = { id: jokeId, joke: joke.innerHTML };
@@ -72,6 +80,23 @@ export default class FavouriteHandler {
 		const jokeEl = this.buildJokeEl(joke.innerHTML, jokeId);
 		// Insert joke in favourite list
 		this.favouritesListEl.innerHTML = this.favouritesListEl.innerHTML + jokeEl;
+	}
+
+	/**
+	* @description
+	* Removes a joke from the favorites list
+	*
+	* @param {number} jokeId - The id of the joke
+	*/
+	removeFromFavourites(jokeId) {
+		const favoredJokes = JSON.parse(localStorage.getItem('favoredJokes'));
+		// Add all jokes except the one with the supplied ID to a new array
+		const updatedList = favoredJokes.filter((joke) => joke.id !== jokeId);
+		// Update local storage
+		localStorage.setItem('favoredJokes', [JSON.stringify(updatedList)]);
+		// Update the rendered list
+		const listToRender = updatedList.map((joke) => this.buildJokeEl(joke.joke, joke.id)).join('');
+		this.favouritesListEl.innerHTML = listToRender;
 	}
 
 	/**
