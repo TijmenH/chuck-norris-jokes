@@ -5,6 +5,8 @@
 *
 * @param {string} method - The method (GET, POST, ..)
 * @param {string} path - The url to perform the XMLHttpRequest on
+*
+* @return {promise} - Promise which resolves when items are fetched
 */
 export default function xmlHttpRequest(method, path) {
 	return new Promise((resolve) => {
