@@ -7,6 +7,7 @@ export default class FavouriteHandler {
 	constructor() {
 		this.jokeListEl = document.querySelector('.random-jokes__list');
 		this.favouritesListEl = document.querySelector('.favourites-jokes__list');
+		this.errorEl = document.querySelector('.error');
 
 		this.addEventListeners();
 		this.checkFavoredJokes();
@@ -46,10 +47,17 @@ export default class FavouriteHandler {
 	addToFavourites(jokeId) {
 		// Find all favourites from localstorage
 		const favoredJokes = (localStorage.getItem('favoredJokes')) ? JSON.parse(localStorage.getItem('favoredJokes')) : [];
+		// Check if the max isn't reached
+		if (favoredJokes.length >= 10) {
+			this.errorEl.innerHTML = 'You reached the max jokes you can favor!';
+			this.errorEl.dataset.show = 'true';
+			return;
+		}
 		// Check if the joke wasn't added yet
 		if (favoredJokes && favoredJokes.length > 0) {
 			if (favoredJokes.find((joke) => joke.id === jokeId)) {
-				console.log('Sorry, joke already favored'); // @TODO ERROR
+				this.errorEl.innerHTML = 'You already favored this joke!';
+				this.errorEl.dataset.show = 'true';
 				return;
 			}
 		}
@@ -76,9 +84,9 @@ export default class FavouriteHandler {
 	*/
 	buildJokeEl(joke, jokeId) {
 		return (`
-			<div class="favourite-jokes__joke">
+			<div class="favourite-jokes__joke joke-item">
 				<p data-id=${jokeId}>${joke}</p>
-				<span class="favourite-jokes__remove-from-favourite" data-joke-id=${jokeId}>
+				<span class="favourite-jokes__remove-from-favourite favourite-link" data-joke-id=${jokeId}>
 					Remove from favourites
 				</span>
 			</div>

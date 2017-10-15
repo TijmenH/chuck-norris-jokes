@@ -37,6 +37,27 @@ h3 {
 	align-content: flex-start;
 }
 
+.favourite-link {
+	transition: ease-in-out color .3s;
+	color: #3f5b87;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+/* ERROR ELEMENT */
+.error {
+	transition: ease-in-out opacity .6s;
+	opacity: 0;
+	color: firebrick;
+	width: 100%;
+	margin: 12px;
+	padding: 6px;
+}
+
+.error[data-show="true"] {
+	opacity: 1;
+}
+
 /* RANDOM JOKES ELEMENT */
 
 .random-jokes {
@@ -62,28 +83,8 @@ h3 {
 	cursor: pointer;
 }
 
-.random-jokes__joke {
-	padding: 12px;
-	border-radius: 4px;
-}
-
-.random-jokes__joke:nth-child(odd) {
-	background: #e2e2e2;
-}
-
-.random-jokes__joke p {
-	display: block;
-	margin-bottom: 6px;
-}
-
-.random-jokes__add-to-favourite {
-	color: #3f5b87;
-	text-decoration: underline;
-	cursor: pointer;
-}
-
 .random-jokes__add-to-favourite:hover {
-	color: #2f4464;
+	color: #92a9cc;
 }
 
 /* FAVOURITES BOX */
@@ -93,4 +94,33 @@ h3 {
 	padding: 12px;
 	border: 1px grey solid;
 	border-radius: 4px;
+}
+
+.favourite-jokes__heading {
+	margin-bottom: 12px;
+}
+
+.favourite-jokes__remove-from-favourite {
+	color: #3f5b87;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+.favourite-jokes__remove-from-favourite:hover {
+	color: firebrick;
+}
+
+/* JOKE LIST ITEM */
+.joke-item {
+	padding: 12px;
+	border-radius: 4px;
+}
+
+.joke-item:nth-child(odd) {
+	background: #e2e2e2;
+}
+
+.joke-item p {
+	display: block;
+	margin-bottom: 6px;
 }
