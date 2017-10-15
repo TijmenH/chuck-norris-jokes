@@ -1,0 +1,19 @@
+{
+  "name": "chuck-norris-jokes",
+  "version": "1.0.0",
+  "description": "Fetches random chuck norris jokes which can be favourited",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TijmenH/chuck-norris-jokes.git"
+  },
+  "author": "Tijmen Helder",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TijmenH/chuck-norris-jokes/issues"
+  },
+  "homepage": "https://github.com/TijmenH/chuck-norris-jokes#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}
