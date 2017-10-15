@@ -11,6 +11,13 @@
 		<div class="app-wrapper">
 			<header>
 				<h1>Welcome to Random Chuck Norris Jokes!</h1>
+				<p>
+					Use the buttons below to fetch 10 Chuck Norris jokes immediately or
+					1 Chuck Norris joke every 5 seconds. Feel free to add any joke to your
+					personal favourite list! Your favourites will be remembered, also on your
+					next visit! Not happy with the list? Clear the list with the link next to
+					the buttons.
+				</p>
 			</header>
 			<div class="error" data-show="false"></div>
 			<div class="main-content">
@@ -19,9 +26,15 @@
 						10 random Chuck Norris Jokes
 					</h2>
 					<div class="random-jokes__actions">
-						<div class="random-jokes__fetch-button">
+						<div class="random-jokes__fetch-button button">
 							<span>Fetch 10 random jokes</span>
 						</div>
+						<div class="random-jokes__timer-button button" data-running="false">
+							<span>Fetch 1 joke every 5 seconds</span>
+						</div>
+						<span class="random-jokes__clear-list-link">
+							Clear list
+						</span>
 					</div>
 					<div class="random-jokes__list">
 						<!-- Random jokes will be added here -->
