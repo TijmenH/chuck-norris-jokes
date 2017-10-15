@@ -1,3 +1,11 @@
+/**
+* @description
+* (very basic setup) performs an XMLHttpRequest
+* @NOTE It's only set-up for GET requests
+*
+* @param {string} method - The method (GET, POST, ..)
+* @param {string} path - The url to perform the XMLHttpRequest on
+*/
 export default function xmlHttpRequest(method, path) {
 	return new Promise((resolve) => {
 		const xhttp = new XMLHttpRequest();
