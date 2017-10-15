@@ -4,14 +4,55 @@
 		<title>Chuck Norris Jokes!</title>
 		<link rel="stylesheet" href="/stylesheets/reset.css">
 		<link rel="stylesheet" href="/stylesheets/style.css">
+		<link href="https://fonts.googleapis.com/css?family=Lora|Nunito" rel="stylesheet">
 		<script type="module" src="/scripts/index.js"></script>
 	</head>
 	<body>
 		<div class="app-wrapper">
-			<header>Header content</header>
-			<article class="random-jokes"></article>
-			<aside class="favourite-jokes"></aside>
-			<footer>Footer content</footer>
+			<header>
+				<h1>Welcome to Random Chuck Norris Jokes!</h1>
+			</header>
+			<div class="main-content">
+				<article class="random-jokes">
+					<h2 class="random-jokes__heading">
+						10 random Chuck Norris Jokes
+					</h2>
+					<div class="random-jokes__wrapper">
+						<div class="random-jokes__joke">
+							<p>This is an example joke, not a joke actually</p>
+							<span class="random-jokes__add-to-favourite">
+								Add to favourites
+							</span>
+						</div>
+						<div class="random-jokes__joke">
+							<p>This is an example joke, not a joke actually</p>
+							<span class="random-jokes__add-to-favourite">
+								Add to favourites
+							</span>
+						</div>
+						<div class="random-jokes__joke">
+							<p>This is an example joke, not a joke actually</p>
+							<span class="random-jokes__add-to-favourite">
+								Add to favourites
+							</span>
+						</div>
+						<div class="random-jokes__joke">
+							<p>This is an example joke, not a joke actually</p>
+							<span class="random-jokes__add-to-favourite">
+								Add to favourites
+							</span>
+						</div>
+					</div>
+				</article>
+				<aside class="favourite-jokes">
+					<h2 class="favourite-jokes__heading">
+						Your favourites (max 10)
+					</h2>
+					<div class="favourites-jokes__wrapper">
+						<!-- All favourites will appear here -->
+					</div>
+				</aside>
+			</div>
 		</div>
 	</body>
 </html>

@@ -1,0 +1,57 @@
+/* GENERAL STYLES */
+body {
+	font-family: 'Lora', serif;
+}
+
+header {
+	margin: 12px;
+	padding: 12px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Nunito', sans-serif;
+}
+
+h1 {
+	font-size: 2rem;
+}
+
+h2 {
+	font-size: 1.8rem;
+}
+
+h3 {
+	font-size: 1.6rem;
+}
+
+/* CUSTOM ELEMENTS */
+.app-wrapper {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.main-content {
+	display: flex;
+}
+
+.random-jokes {
+	width: 60%;
+	margin: 12px;
+	padding: 12px;
+	border: 1px grey solid;
+	border-radius: 4px;
+}
+
+.random-jokes__joke {
+	margin: 6px 0;
+	padding: 6px 0;
+}
+
+.favourite-jokes {
+	width: 40%;
+	margin: 12px;
+	padding: 12px;
+	border: 1px grey solid;
+	border-radius: 4px;
+}
