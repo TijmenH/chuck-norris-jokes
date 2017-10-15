@@ -1,3 +1,7 @@
+import JokesHandler from './components/jokes/jokesHandler.js';
+
 document.addEventListener('DOMContentLoaded', () => {
-	console.log('js is initialized');
+	if (document.querySelector('.random-jokes')) {
+		new JokesHandler();
+	}
 });

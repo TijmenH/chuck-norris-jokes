@@ -35,6 +35,8 @@ h3 {
 	display: flex;
 }
 
+/* RANDOM JOKES ELEMENT */
+
 .random-jokes {
 	width: 60%;
 	margin: 12px;
@@ -43,11 +45,26 @@ h3 {
 	border-radius: 4px;
 }
 
+.random-jokes__actions {
+	text-align: center;
+	margin: 12px 0;
+}
+
+.random-jokes__fetch-button {
+	display: inline-block;
+	border: 1px solid #2f3a4c;
+	border-radius: 4px;
+	padding: 12px;
+	background: #3f5b87;
+	color: #fff;
+}
+
 .random-jokes__joke {
 	margin: 6px 0;
 	padding: 6px 0;
 }
 
+/* FAVOURITES BOX */
 .favourite-jokes {
 	width: 40%;
 	margin: 12px;
