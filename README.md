@@ -13,4 +13,4 @@ This app uses node.js with express as only dependency. ES6 is used, and since it
 browsers might not be able to run this app.
 
 ## How to run
-Run `node app.js` in a terminal from the project root.
+Run `npm i && node app.js` in a terminal from the project root.
